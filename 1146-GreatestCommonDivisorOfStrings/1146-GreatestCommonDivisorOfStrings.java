@@ -1,0 +1,16 @@
+// Last updated: 7/10/2026, 9:33:11 AM
+class Solution {
+    public String gcdOfStrings(String str1, String str2) {
+        if(!(str1+str2).equals(str2+str1))
+        return "";
+        int a=str1.length();
+        int b=str2.length();
+        int temp;
+        while(b!=0){
+            temp=b;
+            b=a%b;
+            a=temp;
+        }
+        return str2.substring(0,a);
+    }
+}
